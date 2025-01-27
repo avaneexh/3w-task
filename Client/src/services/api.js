@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth'; // Replace with your backend URL
-const Bank_Api_URL = 'http://localhost:5000/api';
+const API_URL = 'https://threew-task-backend-ava4.onrender.com/api/auth'; // Replace with your backend URL
+const Bank_Api_URL = 'https://threew-task-backend-ava4.onrender.com/api';
 
 // Create an axios instance for authenticated requests
 const api = axios.create({
