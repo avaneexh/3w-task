@@ -90,14 +90,14 @@ const AdminDashboard = () => {
   useEffect(() => {
     setFilteredUsers(
       users.filter((user) =>
-        user.username.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        user.email.toLowerCase().includes(searchQuery.toLowerCase())
+        user.username?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        user.email?.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
     setFilteredBankAccounts(
       bankAccounts.filter((account) =>
-        account.user.username.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        account.user.email.toLowerCase().includes(searchQuery.toLowerCase())
+        account.user?.username.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        account.user?.email.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
   }, [searchQuery, users, bankAccounts]);
