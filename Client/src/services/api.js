@@ -142,7 +142,9 @@ api.interceptors.request.use(
 export const getAllUsers = async () => {
   try {
     const response = await api.get('/admin/users');
-    return response.data;
+    // Ensure response data is not null or undefined before accessing properties
+    const users = response.data.filter(user => user && user.username);
+    return users;
   } catch (error) {
     console.error('Error fetching users:', error);
     throw error;
